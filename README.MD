@@ -11,4 +11,6 @@ parcel
 parcel-bundler
 react-script
 react
+react-dom
+typescript
 

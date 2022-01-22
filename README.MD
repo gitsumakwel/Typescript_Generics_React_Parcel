@@ -17,8 +17,8 @@ react-dom
 typescript
 
 
-Parcel
 
-Reference   =>    https://parceljs.org/features/targets/
+
+Reference [Parcel]  =>    https://parceljs.org/features/targets/
 
 

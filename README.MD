@@ -1,7 +1,5 @@
 Package.json
 
-Parcel
-https://parceljs.org/features/targets/
 
 used by npm start
 "main"
@@ -19,6 +17,8 @@ react-dom
 typescript
 
 
+Parcel
 
+Reference   =>    https://parceljs.org/features/targets/
 
 

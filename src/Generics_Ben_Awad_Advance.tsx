@@ -33,8 +33,16 @@ interface FormProps<T> {
 }
 
 type typeFormFunc=<T>({}:FormProps<T>)=>JSX.Element;
+/* class Form <T> extends React.Component {
+    constructor(props:FormProps<T>){
+        super(props);
+    }
+    render() {
+        return this.props.children(this.props.values)
+    }
+} */
 const Form:typeFormFunc = <T extends {}>({values,children}:FormProps<T>) => {
-    return (children(values))
+   return (children(values))
 }
 
 const App: React.FC = () => {

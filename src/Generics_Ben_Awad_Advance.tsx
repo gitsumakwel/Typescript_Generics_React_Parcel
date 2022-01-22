@@ -32,20 +32,35 @@ interface FormProps<T> {
     children: (values:T) =>  JSX.Element;
 }
 
-type typeFormFunc=<T>({}:FormProps<T>)=>JSX.Element;
-/* class Form <T> extends React.Component {
-    constructor(props:FormProps<T>){
+class Form<T> extends React.Component {
+    state:FormProps<T>;
+    constructor(props:FormProps<T>) {
         super(props);
+        this.state = {            
+            values:props.values,
+            children:props.children,
+        }
     }
-    render() {
-        return this.props.children(this.props.values)
+    render(){
+        return this.state.children(this.state.values)
     }
-} */
-const Form:typeFormFunc = <T extends {}>({values,children}:FormProps<T>) => {
-   return (children(values))
 }
 
-const App: React.FC = () => {
-    return <Form values={'hello world'} children={(value)=><div>{value}</div>}></Form>
-};
+class App extends React.Component{
+    render() {
+        return (
+            new Form<string>({values:'hello world',children:(value)=><div>{value}</div>}).render()
+        )                            
+    }
+}
+
+
+/* const Form:typeFormFunc = <T extends {}>({values,children}:FormProps<T>) => {
+   return (children(values))
+} 
+   const App:React.FC = () => {
+       return <Form values={'hellow world'} children:(value=><div>{value}</div>)></Form>
+   };
+*/
+
 export default App;

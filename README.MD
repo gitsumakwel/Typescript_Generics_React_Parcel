@@ -6,6 +6,9 @@ https://parceljs.org/features/targets/
 "source": "public/index.html"
 "browserlist": "Chrome 80"
 
-Install
+Installed
 parcel
 parcel-bundler
+react-script
+react
+
